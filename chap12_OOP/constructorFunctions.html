@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Functions</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        const dice = {
+            sides: 6,
+            roll() {
+                return Math.floor(this.sides * Math.random() + 1);
+            }
+        }
+
+        console.log(dice.roll());
+        console.log(dice);
+
+
+        //
+        const Dice = function (sides = 6) {
+            this.sides = sides;
+            this.roll = function () {
+                return Math.floor(this.sides * Math.random() + 1);
+            }
+        }
+
+        console.log(Dice);
+
+
+        // 
+        const whiteDice = new Dice(4);
+        console.log(whiteDice);
+
+
+        /**
+         * instanceof
+         */
+        function Car(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+        const auto = new Car('Honda', 'Accord', 1998);
+
+        console.log(auto instanceof Car);
+        // expected output: true
+
+        console.log(auto instanceof Object);
+        // expected output: true
+
+
+
+        //
+        const literalObject = {};
+        console.log(literalObject);
+
+        const newArray = new Array(5);
+        console.log(newArray);
+    </script>
+
+</body>
+
+</html>
