@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Error</title>
+</head>
+
+<body>
+    <script>
+        function check(n) {
+            if (!(n >= -500 && n <= 500)) {
+                throw new RangeError("The argument must be between -500 and 500.")
+            }
+
+            console.log(check(300));
+        }
+
+        try {
+            check(200)
+        } catch (error) {
+            if (error instanceof RangeError) {
+                // Handle the error
+            }
+
+            console.log(check(300));
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell</title>
+</head>
+<body>
+    <script>
+        login(userName, function(error, user) {
+            if(error) {
+                throw error;
+            } else {
+                getPlayerInfo(user.id, function(error, info) {
+                    if(error) {
+                        throw error;
+                    } else {
+                        loadGame(info, function(error, game) {
+                            if(error) {
+                                throw error;
+                            } else {
+                                // code to run
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions That Return Functions</title>
+</head>
+<body>
+    <script>
+        // function returnHello() {
+        //     console.log('returnHello() called');
+        //     return function() {
+        //         console.log('Hello World!');
+        //     }
+        // }
+
+        // console.log(returnHello());
+
+
+        function greeter(greeting = 'Hello') {
+            return function() {
+                console.log(greeter);
+            }
+        }
+
+        const englishGreeter = greeter();
+        console.log(englishGreeter());
+
+        const frenchGreeter = greeter('Bonjour');
+        console.log(frenchGreeter());
+
+        
+    </script>
+</body>
+</html>

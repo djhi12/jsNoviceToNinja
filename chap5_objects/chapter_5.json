@@ -1,0 +1,9 @@
+{
+    "name": "Batman",
+    "real name": "Bruce Wayne",
+    "height": 74, 
+    "weight": 210, 
+    "hero": true, 
+    "villain": false, 
+    "allies": ["Robin","Batgirl","Superman"]
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+
+<body>
+    <script>
+        function* exampleGenerator() {
+            // Code for generator goes here
+        }
+
+        function* fibonacci(a, b) {
+            let [prev, current] = [a, b];
+            while (true) {
+                [prev, current] = [current, prev + current];
+                yield current;
+            }
+            // console.log(fibonacci(2,3));
+
+            // for (n of sequence) {
+            //     if (n > 10) break;
+            //     console.log(n);
+            // }
+        }
+
+        const sequence = fibonacci(2, 30)
+
+        for (n of sequence) {
+            if (n > 10) break;
+            console.log(n);
+        }
+
+        console.log(sequence.next().value);
+        console.log(sequence.next());
+    </script>
+</body>
+
+</html>

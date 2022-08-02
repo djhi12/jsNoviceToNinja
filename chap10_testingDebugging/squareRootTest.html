@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jest Test</title>
+</head>
+<body>
+    <script>
+        function squareRoot(number) {
+            'use strict';
+            if (number < 0) {
+                throw new RangeError('You can\'t find the square root of negative numbers')
+            }
+            return Math.sqrt(number);
+        };
+
+        test('square root of 4 is 2', () => {
+            expect(squareRoot(4)).toBe(2);
+        });
+    </script>
+</body>
+</html>

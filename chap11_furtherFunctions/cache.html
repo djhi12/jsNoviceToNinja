@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache Property</title>
+</head>
+<body>
+    <script>
+        function square(x) {
+            square.cache = square.cache || {};
+            if (!square.cache[x]) {
+                square.cache[x] = x * x;
+            }
+            return square.cache[x];
+            console.log(square.cache[x]);
+        }
+    </script>
+</body>
+</html>

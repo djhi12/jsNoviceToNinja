@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher-Order Functions</title>
+</head>
+
+<body>
+    <script>
+        // function multiplier(x) {
+        //     return function doubler(x) {
+        //         return x*y;
+        //     }
+        // }
+
+        // console.log(multiplier(1,doubler(2,1)));
+
+        // doubler = multiplier(2);
+        // console.log(doubler(10));
+
+        function power(x) {
+            return function(x) {
+                return Math.pow(x,power);
+            }
+        }
+
+        console.log(power(3,2));
+
+
+        // 
+        // tenExp = power(10);
+    </script>
+</body>
+
+</html>

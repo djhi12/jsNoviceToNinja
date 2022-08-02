@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvalError</title>
+</head>
+
+<body>
+    <script>
+        try {
+            throw new EvalError('Hello', 'someFile.js', 10);
+        } catch (e) {
+            console.log(e instanceof EvalError); // true
+            console.log(e.message); // "Hello"
+            console.log(e.name); // "EvalError"
+            console.log(e.fileName); // "someFile.js"
+            console.log(e.lineNumber); // 10
+            console.log(e.columnNumber); // 0
+            console.log(e.stack); // "@Scratchpad/2:2:9\n"
+        }
+    </script>
+</body>
+
+</html>

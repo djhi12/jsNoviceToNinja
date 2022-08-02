@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+
+<body>
+    <script>
+        // function wait(message, selfDestruct, seconds) {
+        //     setTimeout(selfDestruct, seconds * 1000);
+        //     console.log(message);
+        // }
+
+        // function selfDestruct() {
+        //     console.log('BOOOOM!');
+        // }
+
+        // console.log(wait('This tape will self-destruct in five seconds...', selfDestruct, 5000));
+        // console.log('Hmmmm, should I accept this mission or not?');
+
+        var result = function multiplyTwoNumbers(five, ten ) {
+            return five * ten;
+        }
+        console.log(result(5, 10));
+        // 50 gets printed out
+
+
+        // function sayName(name, cb) {
+        //     console.log(`Hello  ${name}`);
+        //     cb(name);
+        // }
+
+        // function sayHowAreYou(n) {
+        //     console.log('How are you? ' + n);
+        // }
+        // sayName('DelftStack', sayHowAreYou);
+    </script>
+</body>
+
+</html>

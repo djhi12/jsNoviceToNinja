@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generalized Functions</title>
+</head>
+
+<body>
+    <script>
+        // function random(a, b=1) {
+        //     // if only 1 argument is provided, we need to swap the values of a and b
+        //     if ( b===1 ) {
+        //         [a,b] = [b,a];
+        //     }
+        //     return Math.floor((b - a + 1) * Math.random()) + a
+        // }
+
+        // console.log(random(6));
+        // // 
+
+        // console.log(random(10, 20));
+        // // 
+
+        function random(a, b, square) {
+
+            if (b === undefined) b = a, a = 1; // if only one argument is supplied, assume the lower limit is 1
+            let result = Math.floor((b - a + 1) * Math.random()) + a
+            if (square) {
+                result = square(result);
+            }
+            return result;
+        }
+
+        function square(result) {
+            return result * result;
+        }
+
+        console.log(random(1, 10, square));
+
+        console.log(random(1, 10, (result) => 2 * result));
+        // random even number from 2 to 10
+
+        // 
+    </script>
+</body>
+
+</html>

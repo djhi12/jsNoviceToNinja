@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript Novice to Ninja 2nd Edition</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Project for Daniel John Idorot">
+    <link rel="stylesheet" href="/chapter_6_the_document_object_model/chapter_6.css">
+    <!--<link rel="stylesheet" href="index.css"> -->
+    <!--font-family: 'Roboto', sans-serif;
+        font-family: 'Montserrat', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>The Document Object Model | Chapter 6</h1>
+
+        <!--
+            DOM
+            1. HTML tags, the text inside these tags, even the attributes of a tag are all nodes.
+            2. The HTML tag is the root node, and every other part of the document is a child node of this.
+        -->
+        <p class='warning'>Something has gone <em>very</em> wrong!</p>
+
+        <!--
+            An Example Web Page
+        -->
+        <h2 class="h2-web-page">An Example Web Page</h2>
+        <header>
+            <h3 id='title'>Justice League</h3>
+        </header>
+        <ul id='roster'>
+            <li class='hero'>Superman</li>
+            <li class='vigilante hero' id='bats'>Batman</li>
+            <li class='hero'>Wonder Woman</li>
+        </ul>
+
+        <h2 class="h2-web-page">Getting Elements</h2>
+        <!--
+            Getting Elements
+        -->
+        <div id="body"></div>
+        
+    </main>
+    <script src="/chapter_6_the_document_object_model/chapter_6.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+</head>
+<body>
+    <script>
+        const Dice = function(sides=6) {
+            this.sides = sides;
+            this.roll = function() {
+                return Math.floor(this.sides * Math.random() + 1);
+            }
+
+            // console.log(roll);
+            console.log(this.roll());
+        };
+        // console.log(Dice.roll());
+
+        const redDice = new Dice;
+        console.log(redDice);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snippets</title>
+</head>
+
+<body>
+    <script>
+
+        var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+        var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+        var start = Date.now();
+
+        var myReq;
+
+        function step(timestamp) {
+            var progress = timestamp - start;
+            d.style.left = Math.min(progress / 10, 200) + 'px';
+            if (progress < 2000) {
+                // it's important to update the requestId each time you're calling requestAnimationFrame
+                myReq = requestAnimationFrame(step);
+            }
+        }
+        myReq = requestAnimationFrame(step);
+        // the cancellation uses the last requestId
+        cancelAnimationFrame(myReq);
+        
+    </script>
+</body>
+
+</html>

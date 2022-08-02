@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Init-Time Branching</title>
+</head>
+<body>
+    <button onclick="ride()">Try</button>
+    <div id="output"></div>
+
+    <script>
+        function ride() {
+            if (window.unicorn) {
+                ride = function() {
+                    // some code that uses the brand new and sparkly unicorn methods
+                    return 'Riding on a unicorn is the best!';
+                }
+            } else {
+                ride = function() {
+                    // some code that uses the older pony methods
+                    return 'Riding on a pony is still pretty good';
+                }
+            }
+            return ride();
+            // console.log(ride());
+            document.getElementById('output').innerHTML = ride();
+        } 
+
+        console.log(ride());
+        console.log(ride);
+    </script>
+</body>
+</html>

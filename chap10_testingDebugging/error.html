@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+        function doWork() {
+            try {
+                doFailSomeWay();
+            } catch (err) {
+                throw new Error('Failed in some way', {
+                    cause: err
+                });
+            }
+            try {
+                doFailAnotherWay();
+            } catch (err) {
+                throw new Error('Failed in another way', {
+                    cause: err
+                });
+            }
+        }
+
+        try {
+            handleFailSomeWay();
+        } catch (err) {
+            switch (err.message) {
+                case 'Failed in some way':
+                    handleFailSomeWay(err.cause);
+                    break;
+                case 'Failed in another way':
+                    handleFailAnotherWay(err.cause);
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

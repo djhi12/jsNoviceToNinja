@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Variable</title>
+</head>
+<body>
+
+    <div id="test"></div>
+    <script>
+        console.log(x = 6);
+
+        console.log(window.x);
+
+        if(window.x === x){
+            console.log('true');
+        } else {
+            console.log('False');
+        };
+        
+
+        // document.getElementById('test').innerHTML = window.parseInt('4.2');
+        document.getElementById('test').innerHTML = window.isNaN('4.2');
+    
+        console.log(Number.parseInt(4.2));
+        console.log(Number.isNaN(4.2));
+    </script>
+</body>
+</html>

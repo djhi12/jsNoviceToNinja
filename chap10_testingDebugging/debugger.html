@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugger</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        function amOldEnough(age) {
+            // debugger;
+            if (age < 12) {
+                // debugger;
+                return 'No, sorry.';
+            } else if (age < 18) {
+                // debugger;
+                return 'Only if you are accompanied by an adult.'
+            } else {
+                // debugger;
+                return 'Yep, come on in!';
+            }
+        }
+        console.log(amOldEnough(16));
+        document.getElementById('output').innerHTML = amOldEnough(16);
+    </script>
+</body>
+</html>

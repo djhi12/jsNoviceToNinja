@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Assign()</title>
+</head>
+
+<body>
+    <script>
+        // console.log(window.location.assign('https://www.sitepoint.com/'));
+        // window.location.assign('https://www.sitepoint.com/');
+
+
+        const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+
+        console.log(p.replace('dog', 'monkey'));
+        // expected output: "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
+
+
+        const regex = /Dog/i;
+        console.log(p.replace(regex, 'ferret'));
+        // expected output: "The quick brown fox jumps over the lazy ferret. If the dog reacted, was it really lazy?"
+        
+    </script>
+</body>
+
+</html>

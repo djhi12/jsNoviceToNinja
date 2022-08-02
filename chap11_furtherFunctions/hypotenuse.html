@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypotenuse</title>
+</head>
+<body>
+    <script>
+
+        // square 
+        function square(x) {
+            return x*x;
+        }
+
+        // hypotenuse
+        function hypotenuse(a,b) {
+            return Math.sqrt(square(a) + square(b));
+        }
+
+        console.log(hypotenuse(10,20));
+
+        // sum
+        function sum(array, callback) {
+            if(callback) {
+                array = array.map(callback);
+            }
+            return array.reduce((a,b) => a + b);
+        }
+
+        console.log(sum([1,4,3], square));
+
+        // mean
+        function mean(array) {
+            return sum(array)/array.length;
+        }
+
+        console.log(mean([1,2,3]));
+
+        // variance
+        function variance(array) {
+            return sum(array, square) / array.length - square(mean(array));
+        }
+
+        console.log(variance([1,2,3,3,4,4]));
+    </script>
+</body>
+</html>

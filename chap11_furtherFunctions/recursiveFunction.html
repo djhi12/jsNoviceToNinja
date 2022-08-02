@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Functions
+    </title>
+</head>
+<body>
+    <script>
+        // function factorial(n) {
+        //     if (n === 0) {
+        //         return 1;
+        //     } else {
+        //         return n * factorial(n - 2);
+        //     }
+
+        //     // console.log(factorial(2));
+        // }
+        // console.log(factorial(4)); // 8
+
+        function collatz(n, sequence=[n]) {
+            if (n === 1) {
+                return `Sequence took ${sequence.length} steps. It was ${sequence}`;
+            }
+
+            if (n%2 === 0) {
+                n = n/2;
+            } else {
+                n = 3 * n + 1;
+            }
+
+            return collatz(n, [...sequence, n]);
+        }
+
+        console.log(collatz(18));
+    </script>
+</body>
+</html>

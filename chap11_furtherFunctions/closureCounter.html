@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Example</title>
+</head>
+
+<body>
+    <script>
+        function counter(start) {
+            let i = start;
+            const count = counter(2);
+            return function () {
+                return i++;
+            }
+
+            // console.log(counter);
+            console.log(count());
+        }
+
+        console.log(counter);
+    </script>
+</body>
+
+</html>

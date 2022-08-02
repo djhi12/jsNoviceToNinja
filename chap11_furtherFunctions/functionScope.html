@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Scope</title>
+</head>
+<body>
+    <script>
+        const outside = 'In the global scope';
+        function fn() {
+            const  inside = 'In the function scope';
+
+            console.log(inside);
+        }
+
+        console.log(outside);
+        console.log(fn);
+        fn();
+    </script>
+</body>
+</html>

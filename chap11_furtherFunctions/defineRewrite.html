@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions that Define and Rewrite Themselves
+    </title>
+</head>
+
+<body>
+    <script>
+        // function party() {
+        //     console.log('Wow this is amazing!');
+        //     // console.log(party);
+        //     party = function() {
+        //         console.log('Been there, got the T-shirt');
+        //         // console.log(party());
+        //     }
+        //     // console.log(party);
+        //     console.log(party());
+        // }
+
+        // function party() {
+        //     console.log('Wow this is amazing!');
+        // }
+
+        // console.log(party());
+        // console.log(party());
+
+        function party() {
+            console.log('Wow this is amazing!');
+            party = function () {
+                console.log('Been there, got a T-shirt');
+            }
+        }
+
+        const beachParty = party;
+
+        console.log(beachParty()); // undefined
+
+        console.log(party());
+    </script>
+</body>
+
+</html>
