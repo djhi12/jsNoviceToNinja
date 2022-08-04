@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Methods</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        class Dice {
+            constructor(sides = 6) {
+                this.sides = sides;
+            }
+
+            roll() {
+                return Math.floor(this.sides * Math.random() + 1);
+            }
+
+            static description() {
+                return `A way of choosing random numbers`;
+            }
+        }
+
+        console.log(Dice.description);
+        // console.log(Dice.roll);
+        Dice.description();
+        roll();
+    </script>
+</body>
+
+</html>
