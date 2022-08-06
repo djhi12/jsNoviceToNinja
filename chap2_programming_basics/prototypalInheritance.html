@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypal Inheritance</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        class turtle {
+            constructor(name) {
+                this.name = name;
+                this.weapon = 'hands';
+            }
+
+            sayHi() {
+                return `Hi dude, my name is ${this.name}`;
+            }
+            attack() {
+                return `Feel the power of my ${this.weapon}!`;
+            }
+        }
+
+        const leo = new turtle('Leonardo');
+
+        console.log(leo);
+        console.log(leo.sayHi);
+        // turtle.sayHi();
+        console.log(leo.name); // Leonardo
+        console.log(leo.weapon); // hands
+        console.log(turtle.prototype.weapon = 'Feet'); // Feet
+
+
+        const raph = new turtle('Daniel');
+        console.log(raph.weapon);
+        console.log(raph.attack());
+        console.log(raph.constructor.prototype);
+        console.log(Object.getPrototypeOf(raph));
+        console.log(raph.__proto__);
+        console.log(raph.hasOwnProperty(name));
+        console.log(leo.hasOwnProperty(name));
+
+        console.log(turtle.prototype);
+    </script>
+</body>
+
+</html>
