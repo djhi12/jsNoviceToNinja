@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public and Private Methods</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        class turtle {
+            constructor(name, color) {
+                this.name = name;
+                let _color = color;
+                // this.setColor = color => { return _color = color }
+                this.setColor = (color) => {
+                    if (typeof color === 'string') {
+                        return _color = color;
+                    } else {
+                        throw new Error('Color must be a string');
+                    }
+                }
+                this.getColor = () => _color;
+            }
+        }
+
+        let raph = new turtle('Raphael', 'Red');
+        raph.setColor();
+        console.log(raph.setColor());
+
+    </script>
+</body>
+
+</html>
