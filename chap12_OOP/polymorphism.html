@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        console.log([1,2,3].toString());
+
+        class turtle {
+            constructor(name) {
+                this.name = name;
+            }
+            toString() {
+                return `A turtle called ${this.name}`;
+            }
+        }
+
+        let ninja = new turtle("Daniel");
+
+        console.log(ninja.toString());
+
+
+        let place = ["Davao", "Cebu", "Manila"];
+
+        // console.log(place.first()); // error
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Usage</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        const url = 'https://example.com/data';
+
+        fetch(url)
+        .then((response) => {
+            if (response.ok) {
+                return response;
+            }
+            throw Error(reponse.statusText);
+        })
+        .then(response => console.log('Daniel'))
+        .catch(error => console.log('There was an error!'))
+    </script>
+</body>
+
+</html>
