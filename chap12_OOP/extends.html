@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extends</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        class turtle {
+            constructor(name) {
+                this.name = name;
+            }
+            sayHi() {
+                return `Hi dude, my name is ${this.name}`;
+            }
+
+            swim() {
+                return `${this.name} paddles in the water`;
+            }
+        }
+
+        class ninjaTurtle extends turtle {
+            constructor(name) {
+                super(name);
+                this.weapon = 'Hands';
+            }
+
+            attack() {
+                return `Feel the power of my ${this.weapon}`;
+            }
+        }
+
+        let ninja = new ninjaTurtle("Daniel");
+        console.log(ninja);
+    </script>
+</body>
+
+</html>
