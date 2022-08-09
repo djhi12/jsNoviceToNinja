@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters and Setters</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        const me = {
+            name: 'Daniel',
+            value: 'Daniel',
+            writable: true,
+            enumerable: true,
+            configurable: true
+        };
+
+
+
+        Object.defineProperty(me, 'eyeColor', {
+            value: 'Blue',
+            writable: false,
+            enumerable: true
+        });
+
+        me.age = 21;
+        me.retirementAge = 65;
+
+        Object.defineProperty(me, 'yearsTpRetirement', {
+            // get() {
+            //     if (this.age > this.retirementAge) {
+            //         return 0;
+            //     } else {
+            //         return this.retirementAge - this.age;
+            //     },
+            //     set(value) {
+            //         this.age = this.retirementAge - value;
+            //         return value;
+            //     }
+            // }
+        });
+
+        console.log(me.name);
+        console.log(me.value);
+        console.log(me.writable);
+    </script>
+</body>
+
+</html>

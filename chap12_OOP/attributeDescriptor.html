@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property and Descriptors</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        const me = {
+            name: 'Daniel',
+            value: 'Daniel',
+            writable: true,
+            enumerable: true,
+            configurable: true
+        };
+
+        let message;
+
+        if (me.name == 'Michael') {
+            message = 'You are right!';
+        } else {
+            message = 'Wrong!';
+        }
+
+        Object.defineProperty(me, 'eyeColor', {
+            value: 'Blue',
+            writable: false,
+            enumerable: true
+        });
+
+        console.log(message);
+        console.log(me.name);
+        console.log(me.value);
+        console.log(me.writable);
+    </script>
+</body>
+
+</html>
