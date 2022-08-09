@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Responses</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        const url = 'https://www.youtube.com/watch?v=RRmGrbVTrkc';
+        fetch(url)
+            .then(response => response.blob()) // transform the data into a blob object
+            .then(blob => console.log(blob.type))
+            .catch(error => console.log('There was an error:', error))
+    </script>
+</body>
+
+</html>
