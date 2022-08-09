@@ -8,14 +8,14 @@
     <title>Text Responses</title>
 </head>
 
-<body>  
+<body>
     <script>
         "use strict";
 
         const url = 'https://www.youtube.com/watch?v=RRmGrbVTrkc';
         fetch(url)
-        .then(response => response.redirect(newURL)); // redirects to another URL
-        then()
+            .then(response => response.text()) // transform the text stream into a JavaScript string
+        .then(text => console.log(text))
         .catch(error => console.log('There was an error:', error))
     </script>
 </body>
