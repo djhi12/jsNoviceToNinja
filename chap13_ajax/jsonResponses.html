@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Responses</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        const url = 'https://www.youtube.com/watch?v=474zyjL-2a0';
+        fetch(url)
+            .then(response => respnse.json())
+            .then(data => console.log(Object.entries(data)))
+            .catch(error => console.log('There was an error: ', error))
+    </script>
+</body>
+
+</html>
